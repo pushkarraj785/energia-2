@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Your existing head content -->
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #1f1f1f;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    .hamburger-icon {
+      display: none;
+      cursor: pointer;
+      font-size: 24px;
+      color: #fff;
+    }
+
+    @media screen and (max-width: 768px) {
+      .navbar-options {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+      }
+
+      .navbar-options li {
+        text-align: center;
+        margin: 10px 0;
+      }
+
+      .navbar-options a {
+        display: block;
+        padding: 10px;
+        color: #fff;
+      }
+
+      .navbar-logo img {
+        max-height: 40px;
+        margin-left: 10px;
+      }
+
+      .hamburger-icon {
+        display: block;
+      }
+      .social-icons {
+        display: none;
+      }
+    }
+    .navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar-logo{
+    display: inline-flex;
+    margin-top: 30px;
+}
+
+.navbar-logo img {
+    max-height: 50px; /* Adjust the max-height as needed */
+    margin-left: 40px;
+    margin-right: 5px;
+}
+
+.navbar-options {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.navbar-options li {
+    margin-right: 20px;
+}
+
+.navbar-options a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Social Icons in Navbar */
+.social-icons img {
+    max-height: 30px; /* Adjust the max-height as needed */
+    margin-right: 10px;
+}
+
+
+header {
+      background-color: #333;
+      padding: 1em;
+      text-align: center;
+    }
+
+    section {
+      display: flex;
+      justify-content: space-around;
+      padding: 2em;
+      margin: 2em;
+      border: 1px solid #444;
+      border-radius: 8px;
+    }
+
+    section div {
+      flex: 1;
+      margin: 1em;
+    }
+
+    h2 {
+      color: #fff;
+    }
+
+    p {
+      line-height: 1.5;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+    }
+
+       /* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo img {
+    max-height: 50px; /* Adjust the max-height as needed */
+    margin-left: 40px;
+}
+
+.footer-social-icons img {
+    max-height: 30px; /* Adjust the max-height as needed */
+    margin-right: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    display: block;
+    margin-right: 10px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+  </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="/assests/logo.jpg" alt="Logo">
+            <a href="/" style="text-decoration: none; color: #fff;"><h2>ENERGIA'24</h2></a>
+            
+        </div>
+        <div class="hamburger-icon" onclick="toggleNavbar()">☰</div>
+        <ul role="navigation" class="navbar-options">
+            <li><a href="index.html" aria-current="page" class="nav-link transparent-header w-nav-link w--current">Home</a></li>
+            <li><a href="events.html" class="nav-link transparent-header w-nav-link">Events</a></li>
+            <li><a href="sponsers.html" class="nav-link transparent-header w-nav-link">Our Sponsers</a></li>
+            <li><a href="teams.html" class="nav-link transparent-header w-nav-link">Teams</a></li>
+            <li><a href="ca.html" class="nav-link transparent-header w-nav-link">Campus-Ambassador</a></li>
+            <li><a href="contact.html" class="nav-link transparent-header w-nav-link">Contact us</a></li>
+            <li><a href="https://reg.ecell-iitkgp.org/ead/campus-ambassador/" class="button-primary small-header w-button">Register</a></li>
+            
+        </ul>
+        <div class="social-icons">
+            <!-- Add your social media icons and links here -->
+            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+        </div>
+    </nav>
+    <script>
+        function toggleNavbar() {
+      var navbarOptions = document.querySelector('.navbar-options');
+      if (navbarOptions.style.display === 'flex') {
+        navbarOptions.style.display = 'none';
+      } else {
+        navbarOptions.style.display = 'flex';
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      window.addEventListener('resize', function () {
+        var navbarOptions = document.querySelector('.navbar-options');
+        if (window.innerWidth > 768) {
+          navbarOptions.style.display = 'flex';
+        } else {
+          navbarOptions.style.display = 'none';
+        }
+      });
+    });
+      </script>
+
+  <header>
+    <h1>Contact Us</h1>
+  </header>
+
+  <section>
+    <div>
+      <h2>Our Office</h2>
+      <p>123 Main Street, Cityville, Country</p>
+      <iframe
+        width="600"
+        height="450"
+        style="border:0"
+        loading="lazy"
+        allowfullscreen
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.678910111213!2dlongitude!3dlatitude!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDU1JzE2LjciTiA4OMKwMTUnMDguMSJF!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+        allowfullscreen=""
+      ></iframe>
+    </div>
+
+    <div>
+      <h2>Contact Information</h2>
+      <p>Phone: +1 (123) 456-7890</p>
+      <p>Email: info@example.com</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+   <footer>
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="/assests/logo.jpg" alt="Footer Logo" >
+        </div>
+        <div class="footer-social-icons">
+            <!-- Add your social media icons and links here -->
+            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+        </div>
+    </div>
+    <div class="footer-links">
+        <ul >
+            <li><a href="index.html" aria-current="page" class="nav-link transparent-header w-nav-link w--current">Home</a></li>
+            <li><a href="events.html" class="nav-link transparent-header w-nav-link">Events</a></li>
+            <li><a href="sponsers.html" class="nav-link transparent-header w-nav-link">Our Sponsers</a></li>
+            <li><a href="teams.html" class="nav-link transparent-header w-nav-link">Teams</a></li>
+            <li><a href="ca.html" class="nav-link transparent-header w-nav-link">Campus-Ambassador</a></li>
+            <li><a href="contact.html" class="nav-link transparent-header w-nav-link">Contact us</a></li>
+
+            <li><a href="https://reg.ecell-iitkgp.org/ead/campus-ambassador/" class="button-primary small-header w-button">Register</a></li>
+            
+        </ul>
+    </div>
+    <div class="mouse-print">
+        Copyright © 2023|
+        <a href="/" class="mouse-print-link">ENERGIA,24</a>
+
+    </div>
+    <style>
+        .mouse-print {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</footer>
+
+  <script>
+    // Your existing script
+  </script>
+
+</body>
+</html>

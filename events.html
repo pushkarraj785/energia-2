@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="events.css">
+    <style>
+         .hamburger-icon {
+      display: none;
+      cursor: pointer;
+      font-size: 24px;
+      color: #fff;
+    }
+
+    @media screen and (max-width: 768px) {
+      .navbar-options {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        z-index: 100;
+      }
+
+      .navbar-options li {
+        text-align: center;
+        margin: 10px 0;
+      }
+
+      .navbar-options a {
+        display: block;
+        padding: 10px;
+        color: #fff;
+      }
+
+      .navbar-logo img {
+        max-height: 40px;
+        margin-left: 10px;
+      }
+
+      .hamburger-icon {
+        display: block;
+      }
+
+      .social-icons {
+        display: none;
+      }
+      /* .image-container {
+        display: contents;
+      } */
+    }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="/assests/logo.jpg" alt="Logo">
+            <a href="/" style="text-decoration: none; color: #fff;"><h2>ENERGIA'24</h2></a>
+        </div>
+        <div class="hamburger-icon" onclick="toggleNavbar()">☰</div>
+        <ul role="navigation" class="navbar-options">
+            <li><a href="index.html" aria-current="page" class="nav-link transparent-header w-nav-link w--current">Home</a></li>
+            <li><a href="events.html" class="nav-link transparent-header w-nav-link">Events</a></li>
+            <li><a href="sponsers.html" class="nav-link transparent-header w-nav-link">Our Sponsers</a></li>
+            <li><a href="teams.html" class="nav-link transparent-header w-nav-link">Teams</a></li>
+            <li><a href="ca.html" class="nav-link transparent-header w-nav-link">Campus-Ambassador</a></li>
+            <li><a href="contact.html" class="nav-link transparent-header w-nav-link">Contact us</a></li>
+            <li><a href="https://reg.ecell-iitkgp.org/ead/campus-ambassador/" class="button-primary small-header w-button">Register</a></li>
+            
+        </ul>
+        <div class="social-icons">
+            <!-- Add your social media icons and links here -->
+            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+        </div>
+    </nav>
+    <script>
+        function toggleNavbar() {
+      var navbarOptions = document.querySelector('.navbar-options');
+      if (navbarOptions.style.display === 'flex') {
+        navbarOptions.style.display = 'none';
+      } else {
+        navbarOptions.style.display = 'flex';
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      window.addEventListener('resize', function () {
+        var navbarOptions = document.querySelector('.navbar-options');
+        if (window.innerWidth > 768) {
+          navbarOptions.style.display = 'flex';
+        } else {
+          navbarOptions.style.display = 'none';
+        }
+      });
+    });
+      </script>
+  
+  
+    <div class="heading">
+        <h1>OUTDOOR GAMES</h1>
+    </div>
+      <div>
+        <div class="athlethics image-container">
+            <img src="download.jpeg" alt="download">
+            <div class="overlay">
+                <h2>ATHLETICS</h2>
+            </div>
+            
+        </div>
+      <div class="badmition image-container">
+        <img src="badmition-img.jpg" alt="badmition">
+        <div class="overlay">
+            <h2>BADMINTON</h2>
+        </div>
+      </div>
+      <div class="basketball image-container">
+        <img src="basketball-img.jpeg" alt="basketball">
+        <div class="overlay">
+            <h2>BASKETBALL</h2>
+        </div>
+      </div>
+     
+    </div>
+    <div class="text">
+        
+        
+</div>
+        <div class="second">
+            <div class="kabaddi image-container">
+                <img src="kabaddi.jpeg" alt="kabaddi">
+                <div class="overlay">
+                    <h2>KABADDI</h2>
+                </div>
+            </div>
+            <div class="kho-kho image-container">
+                <img src="kho-kho-img.jpg" alt="kho-kho">
+                <div class="overlay">
+                    <h2>KHO-KHO</h2>
+                </div>
+            </div>
+            <div class="lawn-tennis image-container">
+                <img src="lawn-tennis.jpeg" alt="lawn-tennis">
+                <div class="overlay">
+                    <h2>LAWN-TENNIS</h2>
+                </div>
+            </div>
+        </div>
+        
+        <div class="third">
+            <div class="Volleyball image-container">
+                <img src="volleyball-img.jpg" alt="Volleyball">
+                <div class="overlay">
+                    <h2>VOLLEYBALL</h2>
+                </div>
+            </div>
+        </div>
+        <hr class="new5">
+      
+
+
+   <div class="heading-2">
+    <h1>INDOOR GAMES</h1>
+   </div>
+   <div>
+    <div class="carrom image-container">
+        <img src="carrom-img.png" alt="carrom">
+        <div class="overlay">
+            <h2>CARROM</h2>
+        </div>
+    </div>
+    <div class="chess image-container">
+        <img src="chess-.jpg" alt="chess">
+        <div class="overlay">
+            <h2>CHESS</h2>
+        </div>
+    </div>
+    <div class="table-tennis image-container">
+        <img src="table-tennis-img.jpeg" alt="table-tennis">
+        <div class="overlay">
+            <h2>TABLE-TENNIS</h2>
+        </div>
+    </div>
+</div>
+</div>
+
+<div>
+    <div class="snnoker image-container">
+        <img src="snooker.jpeg" alt="snnoker">
+        <div class="overlay">
+            <h2>SNOOKER</h2>
+        </div>
+    </div>
+</div>
+<hr class="new5">
+<div class="heading-3">
+    <h1>E-SPORTS</h1>
+</div>
+<div>
+    <div class="bgmi image-container">
+        <img src="bgmi.jpg" alt="">
+        <div class="overlay">
+            <h2>BGMI</h2>
+        </div>
+    </div>
+    <div class="valorant image-container">
+        <img src="valorant.jpeg" alt="">
+        <div class="overlay">
+            <h2>VALORANT</h2>
+        </div>
+    </div>
+</div>
+
+
+
+    <!-- Content -->
+    <!-- ... Your existing content goes here ... -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="/assests/logo.jpg" alt="Footer Logo" >
+            </div>
+            <div class="footer-social-icons">
+                <!-- Add your social media icons and links here -->
+                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+                <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+            </div>
+        </div>
+        <div class="footer-links">
+            <ul >
+                <li><a href="index.html" aria-current="page" class="nav-link transparent-header w-nav-link w--current">Home</a></li>
+                <li><a href="events.html" class="nav-link transparent-header w-nav-link">Events</a></li>
+                <li><a href="sponsers.html" class="nav-link transparent-header w-nav-link">Our Sponsers</a></li>
+                <li><a href="teams.html" class="nav-link transparent-header w-nav-link">Teams</a></li>
+                <li><a href="ca.html" class="nav-link transparent-header w-nav-link">Campus-Ambassador</a></li>
+                <li><a href="contact.html" class="nav-link transparent-header w-nav-link">Contact us</a></li>
+
+                <li><a href="https://reg.ecell-iitkgp.org/ead/campus-ambassador/" class="button-primary small-header w-button">Register</a></li>
+                
+            </ul>
+        </div>
+        <div class="mouse-print">
+            Copyright © 2023|
+            <a href="/" class="mouse-print-link">ENERGIA,24</a>
+
+        </div>
+        <style>
+            .mouse-print {
+                display: block;
+                margin: 0 auto;
+            }
+        </style>
+    </footer>
+
+</body>
+
+</html>
